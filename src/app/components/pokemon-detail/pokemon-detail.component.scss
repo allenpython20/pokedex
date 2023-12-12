@@ -1,0 +1,141 @@
+#container{
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    transition: 2s;
+    &.open{
+     
+        animation:reverse
+    }
+    
+}
+
+#data {
+    height: 70vh;
+    width: 80vw;
+    background-color: #fceab8;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+
+    .area:first-child {
+        flex-grow: 1;
+        background-color: #bfc3ce;
+        background-image: linear-gradient(45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4),
+            linear-gradient(-45deg, #c3c5c4 25%, transparent 25%, transparent 75%, #c3c5c4 75%, #c3c5c4);
+        background-size: 20px 20px;
+    }
+
+    .area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-left: 55%;
+        padding-right: 20px;
+        background-color: #d3ecf6;
+        background-image: linear-gradient(45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8),
+            linear-gradient(-45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8);
+        background-size: 20px 20px;
+        font-size: larger;
+        // p{
+        //     margin: 10px 10px;
+        // }
+    }
+
+    .area:last-child {
+
+        padding: 2rem;
+        padding-left: 55%;
+        background: repeating-linear-gradient(0deg,
+                #cce486,
+                #cce486 2px,
+                #bfd678 2px,
+                #bfd678 4px,
+            );
+        // p{
+        //     margin: 20px 10px;
+        // }
+    }
+
+}
+
+#containerDescription {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f7db;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    padding: 1rem .5rem;
+
+    span {
+        background-color: #d8ebc5;
+        display: inline-block;
+        height: 100%;
+        width: .8rem;
+    }
+
+    p {
+        font-size: x-large;
+        color: #4b4836;
+        font-family: 'Gill Sans', 'Gill Sans MT';
+    }
+}
+
+#detailsPokemon {
+
+    p {
+        margin-bottom: .4rem;
+        margin-left: 1rem;
+    }
+
+    span {
+        font-size: x-large;
+    }
+
+    .label-data {
+        background-color: #67bcea;
+        display: inline-block;
+        padding: .7rem;
+        border-radius: .4rem;
+        width: 10rem;
+        text-align: center;
+        color: #e1f1fe;
+        margin-right: 1.5rem;
+        font-size: 1.5rem;
+
+    }
+
+    .label-type {
+        display: inline-block;
+        padding: .4rem;
+        background-color: #ffdb00;
+        margin-right: .5rem;
+        font-size: large;
+        color: #fdfef4;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT';
+    }
+
+
+
+
+}
+
+#divButton{
+    background-color: #f4e5aa;
+    display: flex;
+    align-items: center;
+    button{
+        background-color:#f4e5aa; ;
+        border: none;
+    }
+
+    img{
+        width: 100%;
+        &.spin{
+            rotate: 180deg;
+        }
+
+    }
+    
+}

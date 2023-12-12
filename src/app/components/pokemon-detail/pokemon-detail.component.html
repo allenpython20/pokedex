@@ -1,0 +1,32 @@
+<div id="container" [ngClass]="{open:open}">
+   
+    <div id="data">
+        <div class="area">
+            <pokemon-card [pokemonFull]="pokemon"></pokemon-card>   
+        </div>
+        <div id="detailsPokemon" class="area">
+            <p>
+                <span class="label-data">Type</span> <span class="label-type" *ngFor="let type of pokemon?.types">{{type.type.name|uppercase}}</span>
+            </p>
+            <p>
+                <span class="label-data">Height</span> <span>{{pokemon?.height}}</span>
+            </p>
+            <p>
+                <span class="label-data">Weight</span> <span>{{pokemon?.weight}} lbs</span>
+            </p>
+        </div>
+        <div class="area">
+            <div id="containerDescription">
+                <span></span>
+                <p>{{description}}</p>
+                <span></span>
+            </div>
+           
+        </div>
+        
+    </div>
+    <div id="divButton" >
+        <button><img src="assets/img/flecha.png" alt="" (click)="toogleDetail()" [ngClass]="{spin:open}"></button>
+    </div>
+   
+</div>

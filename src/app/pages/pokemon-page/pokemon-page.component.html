@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<main id="container">
+    <pokemon-detail 
+        [pokemon]="pokemonSelected" 
+        (eventTooogleDetail)="toogleDetail($event)"
+        [ngClass]="{open:openDetail}"
+        [open]="openDetail"
+    ></pokemon-detail>
+    <div id="containerPokemonPhoto">
+        <pokemon-photo [pokemon]="pokemonSelected" [open]="openDetail"></pokemon-photo>
+    </div>
+   
+    <div id="containerCards">
+        <img src="assets/img/spinner.svg" alt="" *ngIf="load">
+        <pokemon-card *ngFor="let pokemon of pokemons" 
+            [pokemon]="pokemon" 
+            (eventSelectPokemon)="selectPokemon($event)"
+            [selected]=" pokemon.name === pokemonSelected?.name "
+        ></pokemon-card>
+    </div>
+    
+</main>
+
+<app-footer></app-footer>

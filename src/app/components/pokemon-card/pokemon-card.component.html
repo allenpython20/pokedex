@@ -1,0 +1,11 @@
+<div id="container" *ngIf="pokemon" (click)="selectPokemon()" [ngClass]="{selected:selected}">
+   
+    <img src="assets/img/flecha.png" alt="Flecha" id="arrow" *ngIf="showArrow">
+   
+    <div id="card" [ngClass]="{selected:selected}">
+        <img [src]="id | pokemonImage" alt="">
+        <span>No. {{id}} </span>
+        <span>{{pokemon.name | titlecase }}</span>
+    </div>
+   
+</div>

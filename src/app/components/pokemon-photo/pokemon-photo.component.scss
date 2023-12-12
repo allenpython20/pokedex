@@ -1,0 +1,31 @@
+#container{
+   
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+    border: .6rem solid #8ab3f0;
+    outline: .8rem solid #f7e55c;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f5f7f9,
+        #f5f7f9 15px,
+        #c9e2f4 15px,
+        #c9e2f4 25px
+    );
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        image-rendering: pixelated;
+    }
+    &.open{
+        margin-left: -3.5rem;
+        transition: .5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+// f5f7f9
+// c9e2f4

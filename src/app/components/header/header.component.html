@@ -1,0 +1,32 @@
+<header>
+
+    <div class="detail">
+        <div class="title">
+            <img src="assets/img/pokeball_blue.svg" alt="">
+            <h1>Pokédex</h1>
+            <img src="assets/img/pokeball_blue.svg" alt="">
+        </div>
+        <!-- <div class="item-pokeball">
+            <img src="assets/img/pokeball_blue.svg" alt="">
+            <span>30</span>
+        </div> -->
+        <div class="item-count">
+            <img src="assets/img/pokeball_blue.svg" alt="">
+            <span>{{numberPokemon}}</span>
+        </div>
+    </div>
+
+    <div class="order">
+        <div>
+            <span class="decrease" (click)="changeGeneration(-1)" *ngIf="idGeneration > 1">
+                <img src="assets/img/flecha.png" alt="">
+            </span>
+            <span>{{nameGeneration|titlecase}}</span>
+            <!-- <button (click)="changeGeneration()" >x</button> -->
+            <span class="increae" (click)="changeGeneration(1)"  *ngIf="idGeneration < 9">
+                <img src="assets/img/flecha.png" alt="">
+            </span>
+        </div>
+    </div>
+
+</header>

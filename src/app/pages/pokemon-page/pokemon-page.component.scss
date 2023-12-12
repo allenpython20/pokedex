@@ -1,0 +1,116 @@
+#container{
+   
+    height: calc(100vh - 7.5rem );
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    @media screen and (max-width: 767px) {
+      //grid-template-rows:  .1fr 1fr;
+      display: flex;
+      flex-direction: column;
+    }
+    align-items: center;
+    padding-right: 1rem;
+    background: repeating-linear-gradient(
+      0deg,
+      #79a0e3 0px,
+      #79a0e3 10px,
+      #668cd7 10px,
+      #668cd7 50px,
+      #79a0e3 50px,
+      #79a0e3 60px,
+      #5576c5 60px,
+      #5576c5 90px,
+      #79a0e3 90px,
+      #79a0e3 100px,
+      #4c69b8 100px,
+      #4c69b8 140px,
+      #79a0e3 140px,
+      #79a0e3 150px,
+      #4660b4 150px,
+      #4660b4 160px,
+      #79a0e3 160px,
+      #79a0e3 170px,
+      #5576c5 170px,
+      #5576c5 190px,
+    );
+
+  //scroll
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #e9563d;
+    border-radius: 2px;
+    /* Con este truco hago el thumb más chico que su padre */
+    box-shadow: inset 0 0 0 2px #882a1a;
+     border-left: 1.5px solid transparent;
+     border-right: 1.5px solid transparent;
+     background-clip: padding-box;
+    cursor:grab;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: solid #90ace7 2px;
+    cursor: pointer;
+    background: repeating-linear-gradient(
+      0deg,
+      #276d83,
+      #276d83 5px,
+      #1c4760 7px,
+      #1c4760 9px
+    );
+  }
+
+  #containerCards{
+    display: flex;
+    flex-direction: column;
+    gap:.9rem;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 1.2rem;
+    padding-top: 1rem;
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+  }
+  
+  
+  
+}
+
+#containerPokemonPhoto{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  pokemon-photo{
+    width: 60%;
+    aspect-ratio: 1;
+    z-index: 120;
+    @media screen and (max-width: 767px) {
+      width: 70%;
+    }
+  }
+}
+  
+pokemon-detail{
+  position: absolute;
+  z-index: 110;
+  margin-left: -80vw;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  &.open{
+    margin-left: 0;
+    z-index: 100;
+   
+  }
+
+  @media screen and (max-width: 767px) {
+    //grid-template-rows:  .1fr 1fr;
+    display: none
+  }
+}
